@@ -1,0 +1,28 @@
+PODS:
+  - Alamofire (5.9.0)
+  - CryptoSwift (1.4.0)
+  - SVProgressHUD (2.2.5)
+  - WorldlineConnectKit (6.0.0):
+    - Alamofire (~> 5.4)
+    - CryptoSwift (= 1.4.0)
+
+DEPENDENCIES:
+  - SVProgressHUD
+  - WorldlineConnectKit
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - CryptoSwift
+    - SVProgressHUD
+    - WorldlineConnectKit
+
+SPEC CHECKSUMS:
+  Alamofire: 02b772c9910e8eba1a079227c32fbd9e46c90a24
+  CryptoSwift: 7cc902df1784de3b389a387756c7d710f197730c
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  WorldlineConnectKit: 7841116884b61d3e8deedc5b804b4fc2ffa6122d
+
+PODFILE CHECKSUM: 979d8f0ea05e3a0384a5736474db34879c141ba4
+
+COCOAPODS: 1.15.2

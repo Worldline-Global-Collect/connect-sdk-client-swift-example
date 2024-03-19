@@ -1,0 +1,15 @@
+//
+//  WorldlineConnectExample-Prefix.pch
+//  WorldlineConnectExample
+//
+//  Created for Worldline Global Collect on 20-03-17.
+//  Copyright © 2017 Worldline Global Collect. All rights reserved.
+//
+
+#ifndef WorldlineConnectExample_Prefix_pch
+#define WorldlineConnectExample_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* WorldlineConnectExample_Prefix_pch */
