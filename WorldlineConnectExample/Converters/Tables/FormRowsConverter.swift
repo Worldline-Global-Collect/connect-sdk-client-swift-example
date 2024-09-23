@@ -8,6 +8,7 @@
 
 import Foundation
 import WorldlineConnectKit
+import UIKit
 
 class FormRowsConverter {
 
