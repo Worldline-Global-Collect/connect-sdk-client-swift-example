@@ -51,6 +51,8 @@ class StartViewController: UIViewController, ContinueShoppingTarget, PaymentFini
     var currencyCodeTextField: TextField!
     var isRecurringLabel: Label!
     var isRecurringSwitch: Switch!
+    var isInInstallmentsLabel: Label!
+    var isInInstallmentsSwitch: Switch!
     var payButton: UIButton!
     var shouldGroupProductsSwitch: UISwitch!
 
@@ -323,6 +325,21 @@ class StartViewController: UIViewController, ContinueShoppingTarget, PaymentFini
         containerView.addSubview(isRecurringLabel)
         containerView.addSubview(isRecurringSwitch)
 
+        isInInstallmentsLabel = Label()
+        isInInstallmentsLabel.text =
+            NSLocalizedString(
+                "PaymentInInstallments",
+                tableName: AppConstants.kAppLocalizable,
+                bundle: AppConstants.appBundle,
+                value: "",
+                comment: "Payment is in installments"
+            )
+        isInInstallmentsLabel.translatesAutoresizingMaskIntoConstraints = false
+        isInInstallmentsSwitch = Switch()
+        isInInstallmentsSwitch.translatesAutoresizingMaskIntoConstraints = false
+        containerView.addSubview(isInInstallmentsLabel)
+        containerView.addSubview(isInInstallmentsSwitch)
+
         let shouldGroupProductsSwitchLabel = Label()
         shouldGroupProductsSwitchLabel.text =
             NSLocalizedString(
@@ -374,6 +391,8 @@ class StartViewController: UIViewController, ContinueShoppingTarget, PaymentFini
             "currencyCodeTextField": currencyCodeTextField,
             "isRecurringLabel": isRecurringLabel,
             "isRecurringSwitch": isRecurringSwitch,
+            "isInInstallmentsLabel": isInInstallmentsLabel,
+            "isInInstallmentsSwitch": isInInstallmentsSwitch,
             "payButton": payButton,
             "shouldGroupProductsSwitchLabel": shouldGroupProductsSwitchLabel,
             "shouldGroupProductsSwitch": shouldGroupProductsSwitch,
@@ -574,6 +593,14 @@ class StartViewController: UIViewController, ContinueShoppingTarget, PaymentFini
         )
         containerView.addConstraints(
             NSLayoutConstraint.constraints(
+                withVisualFormat: "|-[isInInstallmentsLabel]-[isInInstallmentsSwitch]-|",
+                options: [.alignAllCenterY],
+                metrics: nil,
+                views: views
+            )
+        )
+        containerView.addConstraints(
+            NSLayoutConstraint.constraints(
                 withVisualFormat: "|-[shouldGroupProductsSwitchLabel]-[shouldGroupProductsSwitch]-|",
                 options: [.alignAllCenterY],
                 metrics: nil,
@@ -588,7 +615,7 @@ class StartViewController: UIViewController, ContinueShoppingTarget, PaymentFini
             NSLayoutConstraint.constraints(
                 withVisualFormat:
                     // swiftlint:disable line_length
-                    "V:|-(fieldSeparator)-[explanation]-(fieldSeparator)-[parsableFields]-(fieldSeparator)-[merchantIdLabel]-[merchantIdTextField]-(groupSeparator)-[amountLabel]-[amountTextField]-(fieldSeparator)-[countryCodeLabel]-[countryCodeTextField]-(fieldSeparator)-[currencyCodeLabel]-[currencyCodeTextField]-(fieldSeparator)-[isRecurringSwitch]-(fieldSeparator)-[shouldGroupProductsSwitch]-(fieldSeparator)-[payButton]-|",
+                    "V:|-(fieldSeparator)-[explanation]-(fieldSeparator)-[parsableFields]-(fieldSeparator)-[merchantIdLabel]-[merchantIdTextField]-(groupSeparator)-[amountLabel]-[amountTextField]-(fieldSeparator)-[countryCodeLabel]-[countryCodeTextField]-(fieldSeparator)-[currencyCodeLabel]-[currencyCodeTextField]-(fieldSeparator)-[isRecurringSwitch]-(fieldSeparator)-[isInInstallmentsSwitch]-(fieldSeparator)-[shouldGroupProductsSwitch]-(fieldSeparator)-[payButton]-|",
                     // swiftlint:enable line_length
                 options: [],
                 metrics: metrics,
@@ -861,6 +888,10 @@ class StartViewController: UIViewController, ContinueShoppingTarget, PaymentFini
         UserDefaults.standard[AppConstants.kCurrency] = currencyCode
         let isRecurring = isRecurringSwitch.isOn
 
+        // Use this property to indicate whether the payment will be paid in instalments.
+        // This will be taken into account when determining the availability of credit cards when making an IIN details call.
+        let isInstallments = isInInstallmentsSwitch.isOn
+
         // ***************************************************************************
         //
         // To retrieve the available payment products, the information stored in the
@@ -877,7 +908,8 @@ class StartViewController: UIViewController, ContinueShoppingTarget, PaymentFini
         context = PaymentContext(
             amountOfMoney: amountOfMoney,
             isRecurring: isRecurring,
-            countryCode: countryCode
+            countryCode: countryCode,
+            isInstallments: isInstallments
         )
 
         guard let context,
