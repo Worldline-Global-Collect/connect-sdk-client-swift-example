@@ -889,7 +889,8 @@ class StartViewController: UIViewController, ContinueShoppingTarget, PaymentFini
         let isRecurring = isRecurringSwitch.isOn
 
         // Use this property to indicate whether the payment will be paid in instalments.
-        // This will be taken into account when determining the availability of credit cards when making an IIN details call.
+        // This will be taken into account when determining the availability of credit cards,
+        // when making an IIN details call.
         let isInstallments = isInInstallmentsSwitch.isOn
 
         // ***************************************************************************
