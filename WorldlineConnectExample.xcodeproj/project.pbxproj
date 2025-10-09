@@ -497,7 +497,6 @@
 				ORGANIZATIONNAME = "Worldline Global Collect";
 				TargetAttributes = {
 					A351DCAE196296000033E23C = {
-						DevelopmentTeam = UTWYEN5FS2;
 						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -806,7 +805,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = UTWYEN5FS2;
+				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "";
 				HEADER_SEARCH_PATHS = (
@@ -842,7 +841,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = UTWYEN5FS2;
+				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "";
 				HEADER_SEARCH_PATHS = (
@@ -895,7 +894,7 @@
 			repositoryURL = "https://github.com/Worldline-Global-Collect/connect-sdk-client-swift";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 6.1.2;
+				minimumVersion = 6.1.4;
 			};
 		};
 		BFF16A052CA17D7700C2D66E /* XCRemoteSwiftPackageReference "SVProgressHUD" */ = {
