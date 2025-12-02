@@ -11,7 +11,10 @@ import UIKit
 import WorldlineConnectKit
 
 class AppConstants {
-    static let sdkBundle = Bundle(path: SDKConstants.kSDKBundlePath!)!
+    private static let assetsBundlePath =
+        Bundle.main.path(forResource: "WorldlineConnectAssets", ofType: "bundle") ?? ""
+    static let assetsBundle = Bundle(path: assetsBundlePath) ?? Bundle.main
+    static let assetsLocalizable = "WCSDKLocalizable"
     static var appBundle = Bundle.main
     static let kAppLocalizable = "AppLocalizable"
     static var kPrimaryColor = UIColor(red: 0, green: 0.8, blue: 0, alpha: 1)
@@ -19,7 +22,7 @@ class AppConstants {
     static let kClientSessionId = "kClientSessionId"
     static let kCustomerId = "kCustomerId"
     static let kMerchantId = "kMerchantId"
-    static let kApplicationIdentifier = "Swift Example Application/v3.1.3"
+    static let kApplicationIdentifier = "Swift Example Application/v3.2.0"
     static let kBaseURL = "kBaseURL"
     static let kAssetsBaseURL = "kAssetsBaseURL"
     static let kPrice = "kPrice"

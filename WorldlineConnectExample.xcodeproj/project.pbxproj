@@ -81,6 +81,7 @@
 		B4DC6A0B1E1E6E1600D9A8BA /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DC6A081E1E6E1500D9A8BA /* StartViewController.swift */; };
 		B4DC6A0D1E1E6E1F00D9A8BA /* PaymentProductsViewControllerTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DC6A0C1E1E6E1F00D9A8BA /* PaymentProductsViewControllerTarget.swift */; };
 		B4DC6A0F1E1E6E8800D9A8BA /* TableSectionConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DC6A0E1E1E6E8800D9A8BA /* TableSectionConverter.swift */; };
+		BF1111052EC5BE48000E1CED /* WorldlineConnectAssets.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BF1111042EC5BE48000E1CED /* WorldlineConnectAssets.bundle */; };
 		BFF16A042CA16F8E00C2D66E /* WorldlineConnectKit in Frameworks */ = {isa = PBXBuildFile; productRef = BFF16A032CA16F8E00C2D66E /* WorldlineConnectKit */; };
 		BFF16A072CA17D7700C2D66E /* SVProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = BFF16A062CA17D7700C2D66E /* SVProgressHUD */; };
 		E9BB319A152C66027E12877F /* ParseJsonTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BB3C55E589D8266BDBE4C8 /* ParseJsonTarget.swift */; };
@@ -167,6 +168,7 @@
 		B4DC6A081E1E6E1500D9A8BA /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StartViewController.swift; path = ViewControllers/StartViewController.swift; sourceTree = "<group>"; };
 		B4DC6A0C1E1E6E1F00D9A8BA /* PaymentProductsViewControllerTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PaymentProductsViewControllerTarget.swift; path = ViewControllers/Targets/PaymentProductsViewControllerTarget.swift; sourceTree = "<group>"; };
 		B4DC6A0E1E1E6E8800D9A8BA /* TableSectionConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableSectionConverter.swift; path = Converters/Tables/TableSectionConverter.swift; sourceTree = "<group>"; };
+		BF1111042EC5BE48000E1CED /* WorldlineConnectAssets.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WorldlineConnectAssets.bundle; sourceTree = "<group>"; };
 		E9BB3C55E589D8266BDBE4C8 /* ParseJsonTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParseJsonTarget.swift; path = Protocols/ParseJsonTarget.swift; sourceTree = "<group>"; };
 		F519A9D21DBF5F2100E61034 /* WorldlineConnectExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WorldlineConnectExample.entitlements; sourceTree = "<group>"; };
 		F52E88921E9BDE8300546DC2 /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Button.swift; path = Views/Buttons/Button.swift; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 		A351DCA6196296000033E23C = {
 			isa = PBXGroup;
 			children = (
+				BF1111042EC5BE48000E1CED /* WorldlineConnectAssets.bundle */,
 				A351DCB8196296000033E23C /* WorldlineConnectExample */,
 				A351DCB1196296000033E23C /* Frameworks */,
 				A351DCB0196296000033E23C /* Products */,
@@ -618,6 +621,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A363FC591AA70C8200186592 /* AppLocalizable.strings in Resources */,
+				BF1111052EC5BE48000E1CED /* WorldlineConnectAssets.bundle in Resources */,
 				A351DCC5196296000033E23C /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -894,7 +898,7 @@
 			repositoryURL = "https://github.com/Worldline-Global-Collect/connect-sdk-client-swift";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 6.1.4;
+				minimumVersion = 7.0.0;
 			};
 		};
 		BFF16A052CA17D7700C2D66E /* XCRemoteSwiftPackageReference "SVProgressHUD" */ = {

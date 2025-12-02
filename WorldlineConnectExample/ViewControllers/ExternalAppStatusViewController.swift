@@ -45,8 +45,8 @@ class ExternalAppStatusViewController: UIViewController {
             let text =
                 NSLocalizedString(
                     key,
-                    tableName: SDKConstants.kSDKLocalizable,
-                    bundle: AppConstants.sdkBundle,
+                    tableName: AppConstants.assetsLocalizable,
+                    bundle: AppConstants.assetsBundle,
                     value: "Your payment is being processed",
                     comment: ""
                 )
@@ -63,8 +63,8 @@ class ExternalAppStatusViewController: UIViewController {
             label.text =
                 NSLocalizedString(
                     key,
-                    tableName: SDKConstants.kSDKLocalizable,
-                    bundle: AppConstants.sdkBundle,
+                    tableName: AppConstants.assetsLocalizable,
+                    bundle: AppConstants.assetsBundle,
                     value: "Started Processing",
                     comment: ""
                 )
@@ -89,8 +89,8 @@ class ExternalAppStatusViewController: UIViewController {
             label.text =
                 NSLocalizedString(
                     key,
-                    tableName: SDKConstants.kSDKLocalizable,
-                    bundle: AppConstants.sdkBundle,
+                    tableName: AppConstants.assetsLocalizable,
+                    bundle: AppConstants.assetsBundle,
                     value: "Authenticated Transaction",
                     comment: ""
                 )
@@ -108,8 +108,8 @@ class ExternalAppStatusViewController: UIViewController {
             label.text =
                 NSLocalizedString(
                     key,
-                    tableName: SDKConstants.kSDKLocalizable,
-                    bundle: AppConstants.sdkBundle,
+                    tableName: AppConstants.assetsLocalizable,
+                    bundle: AppConstants.assetsBundle,
                     value: "Completed Payment",
                     comment: ""
                 )

@@ -115,8 +115,8 @@ class PaymentProductViewController: UITableViewController, UITextFieldDelegate,
                 """
                 \(NSLocalizedString(
                     "gc.app.general.shoppingCart.total",
-                    tableName: SDKConstants.kSDKLocalizable,
-                    bundle: AppConstants.sdkBundle,
+                    tableName: AppConstants.assetsLocalizable,
+                    bundle: AppConstants.assetsBundle,
                     value: "",
                     comment: "Description of the amount header."
                 )):
@@ -133,8 +133,8 @@ class PaymentProductViewController: UITableViewController, UITextFieldDelegate,
             securePayment:
                 NSLocalizedString(
                     "gc.app.general.securePaymentText",
-                    tableName: SDKConstants.kSDKLocalizable,
-                    bundle: AppConstants.sdkBundle,
+                    tableName: AppConstants.assetsLocalizable,
+                    bundle: AppConstants.assetsBundle,
                     value: "",
                     comment: "Text indicating that a secure payment method is used."
                 )
@@ -148,8 +148,8 @@ class PaymentProductViewController: UITableViewController, UITextFieldDelegate,
                 title:
                     NSLocalizedString(
                         "gc.app.paymentProductDetails.rememberMe",
-                        tableName: SDKConstants.kSDKLocalizable,
-                        bundle: AppConstants.sdkBundle,
+                        tableName: AppConstants.assetsLocalizable,
+                        bundle: AppConstants.assetsBundle,
                         value: "",
                         comment: "Explanation of the switch for remembering payment information."
                     ),
@@ -165,8 +165,8 @@ class PaymentProductViewController: UITableViewController, UITextFieldDelegate,
         switchFormRowTooltip.text =
             NSLocalizedString(
                 "gc.app.paymentProductDetails.rememberMe.tooltip",
-                tableName: SDKConstants.kSDKLocalizable,
-                bundle: AppConstants.sdkBundle,
+                tableName: AppConstants.assetsLocalizable,
+                bundle: AppConstants.assetsBundle,
                 value: "",
                 comment: ""
             )
@@ -177,8 +177,8 @@ class PaymentProductViewController: UITableViewController, UITextFieldDelegate,
         let payButtonTitle =
             NSLocalizedString(
                 "gc.app.paymentProductDetails.payButton",
-                tableName: SDKConstants.kSDKLocalizable,
-                bundle: AppConstants.sdkBundle,
+                tableName: AppConstants.assetsLocalizable,
+                bundle: AppConstants.assetsBundle,
                 value: "",
                 comment: "Title of the pay button on the payment product screen."
             )
@@ -189,8 +189,8 @@ class PaymentProductViewController: UITableViewController, UITextFieldDelegate,
         let cancelButtonTitle =
             NSLocalizedString(
                 "gc.app.paymentProductDetails.cancelButton",
-                tableName: SDKConstants.kSDKLocalizable,
-                bundle: AppConstants.sdkBundle,
+                tableName: AppConstants.assetsLocalizable,
+                bundle: AppConstants.assetsBundle,
                 value: "",
                 comment: "Title of the cancel button on the payment product screen."
             )

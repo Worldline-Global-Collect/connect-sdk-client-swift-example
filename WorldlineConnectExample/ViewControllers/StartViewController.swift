@@ -773,8 +773,8 @@ class StartViewController: UIViewController, ContinueShoppingTarget, PaymentFini
         let status =
             NSLocalizedString(
                 "gc.app.general.loading.body",
-                tableName: SDKConstants.kSDKLocalizable,
-                bundle: AppConstants.sdkBundle,
+                tableName: AppConstants.assetsLocalizable,
+                bundle: AppConstants.assetsBundle,
                 value: "",
                 comment: ""
             )

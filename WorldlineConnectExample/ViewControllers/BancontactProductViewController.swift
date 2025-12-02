@@ -315,8 +315,8 @@ class BancontactProductViewController: PaymentProductViewController {
         let separatorTextValue =
             NSLocalizedString(
                 separatorTextKey,
-                tableName: SDKConstants.kSDKLocalizable,
-                bundle: AppConstants.sdkBundle,
+                tableName: AppConstants.assetsLocalizable,
+                bundle: AppConstants.assetsBundle,
                 value: "Or",
                 comment: ""
             ).uppercased()
@@ -334,8 +334,8 @@ class BancontactProductViewController: PaymentProductViewController {
         let translation =
             NSLocalizedString(
                 key,
-                tableName: SDKConstants.kSDKLocalizable,
-                bundle: AppConstants.sdkBundle,
+                tableName: AppConstants.assetsLocalizable,
+                bundle: AppConstants.assetsBundle,
                 value: value,
                 comment: ""
             )
@@ -355,8 +355,8 @@ class BancontactProductViewController: PaymentProductViewController {
         let translation =
             NSLocalizedString(
                 key,
-                tableName: SDKConstants.kSDKLocalizable,
-                bundle: AppConstants.sdkBundle,
+                tableName: AppConstants.assetsLocalizable,
+                bundle: AppConstants.assetsBundle,
                 value: value,
                 comment: ""
             )

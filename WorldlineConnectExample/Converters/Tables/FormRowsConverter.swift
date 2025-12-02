@@ -88,8 +88,8 @@ class FormRowsConverter {
             let errorMessageValueWithPlaceholders =
                 NSLocalizedString(
                     errorMessageKey,
-                    tableName: SDKConstants.kSDKLocalizable,
-                    bundle: AppConstants.sdkBundle,
+                    tableName: AppConstants.assetsLocalizable,
+                    bundle: AppConstants.assetsBundle,
                     value: "",
                     comment: ""
                 )
@@ -108,8 +108,8 @@ class FormRowsConverter {
             let errorMessageValueWithPlaceholders =
                 NSLocalizedString(
                     errorMessageKey,
-                    tableName: SDKConstants.kSDKLocalizable,
-                    bundle: AppConstants.sdkBundle,
+                    tableName: AppConstants.assetsLocalizable,
+                    bundle: AppConstants.assetsBundle,
                     value: "",
                     comment: ""
                 )
@@ -132,8 +132,8 @@ class FormRowsConverter {
             errorMessageValue =
                 NSLocalizedString(
                     errorMessageKey,
-                    tableName: SDKConstants.kSDKLocalizable,
-                    bundle: AppConstants.sdkBundle,
+                    tableName: AppConstants.assetsLocalizable,
+                    bundle: AppConstants.assetsBundle,
                     value: "",
                     comment: ""
                 )
@@ -162,8 +162,8 @@ class FormRowsConverter {
         var placeholderValue =
             NSLocalizedString(
                 placeholderKey,
-                tableName: SDKConstants.kSDKLocalizable,
-                bundle: AppConstants.sdkBundle,
+                tableName: AppConstants.assetsLocalizable,
+                bundle: AppConstants.assetsBundle,
                 value: "",
                 comment: ""
             )
@@ -172,8 +172,8 @@ class FormRowsConverter {
             placeholderValue =
                 NSLocalizedString(
                     placeholderKey,
-                    tableName: SDKConstants.kSDKLocalizable,
-                    bundle: AppConstants.sdkBundle,
+                    tableName: AppConstants.assetsLocalizable,
+                    bundle: AppConstants.assetsBundle,
                     value: "",
                     comment: ""
                 )
@@ -231,8 +231,8 @@ class FormRowsConverter {
         var placeholderValue =
             NSLocalizedString(
                 placeholderKey,
-                tableName: SDKConstants.kSDKLocalizable,
-                bundle: AppConstants.sdkBundle,
+                tableName: AppConstants.assetsLocalizable,
+                bundle: AppConstants.assetsBundle,
                 value: "",
                 comment: ""
             )
@@ -241,8 +241,8 @@ class FormRowsConverter {
             placeholderValue =
                 NSLocalizedString(
                     placeholderKey,
-                    tableName: SDKConstants.kSDKLocalizable,
-                    bundle: AppConstants.sdkBundle,
+                    tableName: AppConstants.assetsLocalizable,
+                    bundle: AppConstants.assetsBundle,
                     value: "",
                     comment: ""
                 )
@@ -311,8 +311,8 @@ class FormRowsConverter {
         let descriptionValue =
             NSLocalizedString(
                 descriptionKey,
-                tableName: SDKConstants.kSDKLocalizable,
-                bundle: AppConstants.sdkBundle,
+                tableName: AppConstants.assetsLocalizable,
+                bundle: AppConstants.assetsBundle,
                 value: "",
                 comment: "Accept {link}"
             )
@@ -325,8 +325,8 @@ class FormRowsConverter {
         let labelValue =
             NSLocalizedString(
                 labelKey,
-                tableName: SDKConstants.kSDKLocalizable,
-                bundle: AppConstants.sdkBundle,
+                tableName: AppConstants.assetsLocalizable,
+                bundle: AppConstants.assetsBundle,
                 value: "",
                 comment: ""
             )
@@ -370,8 +370,8 @@ class FormRowsConverter {
             var tooltipTextValue =
                 NSLocalizedString(
                     tooltipTextKey,
-                    tableName: SDKConstants.kSDKLocalizable,
-                    bundle: AppConstants.sdkBundle,
+                    tableName: AppConstants.assetsLocalizable,
+                    bundle: AppConstants.assetsBundle,
                     value: "",
                     comment: ""
                 )
@@ -380,8 +380,8 @@ class FormRowsConverter {
                 tooltipTextValue =
                     NSLocalizedString(
                         tooltipTextKey,
-                        tableName: SDKConstants.kSDKLocalizable,
-                        bundle: AppConstants.sdkBundle,
+                        tableName: AppConstants.assetsLocalizable,
+                        bundle: AppConstants.assetsBundle,
                         value: "",
                         comment: ""
                     )
@@ -411,8 +411,8 @@ class FormRowsConverter {
         var labelValue =
             NSLocalizedString(
                 labelKey,
-                tableName: SDKConstants.kSDKLocalizable,
-                bundle: AppConstants.sdkBundle,
+                tableName: AppConstants.assetsLocalizable,
+                bundle: AppConstants.assetsBundle,
                 value: "",
                 comment: ""
             )
@@ -422,8 +422,8 @@ class FormRowsConverter {
             labelValue =
                 NSLocalizedString(
                     labelKey,
-                    tableName: SDKConstants.kSDKLocalizable,
-                    bundle: AppConstants.sdkBundle,
+                    tableName: AppConstants.assetsLocalizable,
+                    bundle: AppConstants.assetsBundle,
                     value: "",
                     comment: ""
                 )

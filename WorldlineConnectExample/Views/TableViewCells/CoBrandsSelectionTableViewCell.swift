@@ -25,8 +25,8 @@ class CoBrandsSelectionTableViewCell: TableViewCell {
         let cobrandsString =
             NSLocalizedString(
                 "gc.general.cobrands.toggleCobrands",
-                tableName: SDKConstants.kSDKLocalizable,
-                bundle: AppConstants.sdkBundle,
+                tableName: AppConstants.assetsLocalizable,
+                bundle: AppConstants.assetsBundle,
                 value: "",
                 comment: ""
             )

@@ -37,8 +37,8 @@ class COBrandsExplanationTableViewCell: TableViewCell {
         let cellString =
             NSLocalizedString(
                 cellKey,
-                tableName: SDKConstants.kSDKLocalizable,
-                bundle: AppConstants.sdkBundle,
+                tableName: AppConstants.assetsLocalizable,
+                bundle: AppConstants.assetsBundle,
                 value: "",
                 comment: ""
             )

@@ -44,8 +44,8 @@ class PaymentProductsViewController: UITableViewController {
             accountsSection.title =
                 NSLocalizedString(
                     "gc.app.paymentProductSelection.accountsOnFileTitle",
-                    tableName: SDKConstants.kSDKLocalizable,
-                    bundle: AppConstants.sdkBundle,
+                    tableName: AppConstants.assetsLocalizable,
+                    bundle: AppConstants.assetsBundle,
                     value: "",
                     comment: "Title of the section that displays stored payment products."
                 )
@@ -56,8 +56,8 @@ class PaymentProductsViewController: UITableViewController {
         productsSection.title =
             NSLocalizedString(
                 "gc.app.paymentProductSelection.pageTitle",
-                tableName: SDKConstants.kSDKLocalizable,
-                bundle: AppConstants.sdkBundle,
+                tableName: AppConstants.assetsLocalizable,
+                bundle: AppConstants.assetsBundle,
                 value: "",
                 comment: "Title of the section that shows all available payment products."
             )
@@ -75,8 +75,8 @@ class PaymentProductsViewController: UITableViewController {
         let totalLabel =
             NSLocalizedString(
                 "gc.app.general.shoppingCart.total",
-                tableName: SDKConstants.kSDKLocalizable,
-                bundle: AppConstants.sdkBundle,
+                tableName: AppConstants.assetsLocalizable,
+                bundle: AppConstants.assetsBundle,
                 value: "",
                 comment: "Description of the amount header."
             )
@@ -94,8 +94,8 @@ class PaymentProductsViewController: UITableViewController {
             securePayment:
                 NSLocalizedString(
                     "gc.app.general.securePaymentText",
-                    tableName: SDKConstants.kSDKLocalizable,
-                    bundle: AppConstants.sdkBundle,
+                    tableName: AppConstants.assetsLocalizable,
+                    bundle: AppConstants.assetsBundle,
                     value: "",
                     comment: "Text indicating that a secure payment method is used."
                 )

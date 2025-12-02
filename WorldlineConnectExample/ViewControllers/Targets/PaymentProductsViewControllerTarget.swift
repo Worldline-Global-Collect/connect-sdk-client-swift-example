@@ -193,8 +193,8 @@ class PaymentProductsViewControllerTarget: NSObject, PKPaymentAuthorizationViewC
         let status =
             NSLocalizedString(
                 "gc.app.general.loading.body",
-                tableName: SDKConstants.kSDKLocalizable,
-                bundle: AppConstants.sdkBundle,
+                tableName: AppConstants.assetsLocalizable,
+                bundle: AppConstants.assetsBundle,
                 value: "",
                 comment: ""
             )
@@ -338,8 +338,8 @@ class PaymentProductsViewControllerTarget: NSObject, PKPaymentAuthorizationViewC
             let status =
                 NSLocalizedString(
                     "gc.app.general.loading.body",
-                    tableName: SDKConstants.kSDKLocalizable,
-                    bundle: AppConstants.sdkBundle,
+                    tableName: AppConstants.assetsLocalizable,
+                    bundle: AppConstants.assetsBundle,
                     value: "",
                     comment: ""
                 )
@@ -471,8 +471,8 @@ class PaymentProductsViewControllerTarget: NSObject, PKPaymentAuthorizationViewC
             PKPaymentSummaryItem(
                 label: NSLocalizedString(
                     "gc.app.general.shoppingCart.subtotal",
-                    tableName: SDKConstants.kSDKLocalizable,
-                    bundle: AppConstants.sdkBundle,
+                    tableName: AppConstants.assetsLocalizable,
+                    bundle: AppConstants.assetsBundle,
                     value: "",
                     comment: "subtotal summary item title"
                 ),
@@ -483,8 +483,8 @@ class PaymentProductsViewControllerTarget: NSObject, PKPaymentAuthorizationViewC
             PKPaymentSummaryItem(
                 label: NSLocalizedString(
                     "gc.app.general.shoppingCart.shippingCost",
-                    tableName: SDKConstants.kSDKLocalizable,
-                    bundle: AppConstants.sdkBundle,
+                    tableName: AppConstants.assetsLocalizable,
+                    bundle: AppConstants.assetsBundle,
                     value: "",
                     comment: "shipping cost summary item title"
                 ),
@@ -524,8 +524,8 @@ class PaymentProductsViewControllerTarget: NSObject, PKPaymentAuthorizationViewC
         let status =
             NSLocalizedString(
                 "gc.app.general.loading.body",
-                tableName: SDKConstants.kSDKLocalizable,
-                bundle: AppConstants.sdkBundle,
+                tableName: AppConstants.assetsLocalizable,
+                bundle: AppConstants.assetsBundle,
                 value: "",
                 comment: ""
             )
