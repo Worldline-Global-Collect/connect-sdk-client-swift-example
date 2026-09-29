@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -84,6 +84,7 @@
 		BF1111052EC5BE48000E1CED /* WorldlineConnectAssets.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BF1111042EC5BE48000E1CED /* WorldlineConnectAssets.bundle */; };
 		BFF16A042CA16F8E00C2D66E /* WorldlineConnectKit in Frameworks */ = {isa = PBXBuildFile; productRef = BFF16A032CA16F8E00C2D66E /* WorldlineConnectKit */; };
 		BFF16A072CA17D7700C2D66E /* SVProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = BFF16A062CA17D7700C2D66E /* SVProgressHUD */; };
+		D5DB010A305C033200B8DA5A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DB0109305C033200B8DA5A /* SceneDelegate.swift */; };
 		E9BB319A152C66027E12877F /* ParseJsonTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BB3C55E589D8266BDBE4C8 /* ParseJsonTarget.swift */; };
 		F52E88931E9BDE8300546DC2 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52E88921E9BDE8300546DC2 /* Button.swift */; };
 		F553D8B81EB09CC00075622C /* BoletoProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F553D8B71EB09CC00075622C /* BoletoProductViewController.swift */; };
@@ -169,6 +170,7 @@
 		B4DC6A0C1E1E6E1F00D9A8BA /* PaymentProductsViewControllerTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PaymentProductsViewControllerTarget.swift; path = ViewControllers/Targets/PaymentProductsViewControllerTarget.swift; sourceTree = "<group>"; };
 		B4DC6A0E1E1E6E8800D9A8BA /* TableSectionConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableSectionConverter.swift; path = Converters/Tables/TableSectionConverter.swift; sourceTree = "<group>"; };
 		BF1111042EC5BE48000E1CED /* WorldlineConnectAssets.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WorldlineConnectAssets.bundle; sourceTree = "<group>"; };
+		D5DB0109305C033200B8DA5A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E9BB3C55E589D8266BDBE4C8 /* ParseJsonTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParseJsonTarget.swift; path = Protocols/ParseJsonTarget.swift; sourceTree = "<group>"; };
 		F519A9D21DBF5F2100E61034 /* WorldlineConnectExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WorldlineConnectExample.entitlements; sourceTree = "<group>"; };
 		F52E88921E9BDE8300546DC2 /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Button.swift; path = Views/Buttons/Button.swift; sourceTree = "<group>"; };
@@ -270,6 +272,7 @@
 				B4DC6A001E1E5A4800D9A8BA /* AppDelegate.swift */,
 				A351DCC4196296000033E23C /* Images.xcassets */,
 				A351DCB9196296000033E23C /* Supporting Files */,
+				D5DB0109305C033200B8DA5A /* SceneDelegate.swift */,
 			);
 			path = WorldlineConnectExample;
 			sourceTree = "<group>";
@@ -677,6 +680,7 @@
 				6DF724911E1D2EAA00D6BA15 /* PaymentFinishedTarget.swift in Sources */,
 				6D7E21671E1BF53B007BA84B /* AppConstants.swift in Sources */,
 				732012E71EF2806F00A736A5 /* FormRowQRCode.swift in Sources */,
+				D5DB010A305C033200B8DA5A /* SceneDelegate.swift in Sources */,
 				81BCAD281F06B38B000B0BCF /* SeparatorView.swift in Sources */,
 				73E9DC201EFBC01000969D43 /* StatusView.swift in Sources */,
 				7240260E262ECD5300AC8673 /* StartPaymentParsedJsonData.swift in Sources */,
@@ -755,7 +759,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE = "A0A13123-5845-42BE-A813-90ED61E2B2CF";
 				SDKROOT = iphoneos;
@@ -790,7 +794,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				PROVISIONING_PROFILE = "A0A13123-5845-42BE-A813-90ED61E2B2CF";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
@@ -818,7 +822,7 @@
 					"\"${SRCROOT}\"",
 				);
 				INFOPLIST_FILE = WorldlineConnectExample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -854,7 +858,7 @@
 					"\"${SRCROOT}\"",
 				);
 				INFOPLIST_FILE = WorldlineConnectExample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -898,7 +902,7 @@
 			repositoryURL = "https://github.com/Worldline-Global-Collect/connect-sdk-client-swift";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 7.0.0;
+				minimumVersion = 8.0.0;
 			};
 		};
 		BFF16A052CA17D7700C2D66E /* XCRemoteSwiftPackageReference "SVProgressHUD" */ = {

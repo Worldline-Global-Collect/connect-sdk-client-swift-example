@@ -411,7 +411,6 @@ class PaymentProductsViewControllerTarget: NSObject, PKPaymentAuthorizationViewC
             fatalError("MerchantId could not be retrieved as a String")
         }
 
-        generateSummaryItems()
         let paymentRequest = PKPaymentRequest()
 
         if let acquirerCountry = paymentProduct.acquirerCountry,
@@ -422,8 +421,28 @@ class PaymentProductsViewControllerTarget: NSObject, PKPaymentAuthorizationViewC
         }
 
         paymentRequest.currencyCode = context.amountOfMoney.currencyCode
+
+        if context.isRecurring {
+            guard let managementURL = URL(string: "https://example.com") else {
+                // Invalid URL
+                return
+            }
+
+            let recurringSummaryItem = generateRecurringPaymentSummaryItem()
+
+            paymentRequest.recurringPaymentRequest = PKRecurringPaymentRequest(
+                paymentDescription: "Recurring payment with \(merchantId)",
+                regularBilling: recurringSummaryItem,
+                managementURL: managementURL
+            )
+            self.summaryItems = [recurringSummaryItem]
+            paymentRequest.paymentSummaryItems = [recurringSummaryItem]
+        } else {
+            generateSummaryItems()
+            paymentRequest.paymentSummaryItems = summaryItems
+        }
+
         paymentRequest.supportedNetworks = paymentProductNetworks.paymentProductNetworks
-        paymentRequest.paymentSummaryItems = summaryItems
         paymentRequest.merchantCapabilities = [.capability3DS, .capabilityDebit, .capabilityCredit]
 
         // This merchant id is set in the merchants apple developer portal and is linked to a certificate
@@ -449,6 +468,33 @@ class PaymentProductsViewControllerTarget: NSObject, PKPaymentAuthorizationViewC
         }
     }
 
+    private func generateRecurringPaymentSummaryItem() -> PKRecurringPaymentSummaryItem {
+
+        // ***************************************************************************
+        //
+        // Below is a recurring payment that starts today and occurs monthly for an unlimited time.
+        // These values serve as an example and can be modified to your wishes.
+        //
+        // The amount in `PKRecurringPaymentSummaryItem` is the amount per month in cents and converted to an NSDecimalNumber with
+        // an exponent of -2.
+        //
+        // ***************************************************************************
+        let intervalAmountInCents = context.amountOfMoney.totalAmount
+        let recurringPaymentSummaryItem = PKRecurringPaymentSummaryItem(label: "Merchant Name", amount: NSDecimalNumber(mantissa: UInt64(intervalAmountInCents), exponent: -2, isNegative: false))
+
+        // Start date of the payment, nil means the payment starts today
+        recurringPaymentSummaryItem.startDate = nil
+
+        // Payment occurs once a month
+        recurringPaymentSummaryItem.intervalUnit = .month
+        recurringPaymentSummaryItem.intervalCount = 1
+
+        // End date of the payment, nil means the payment has no set end date
+        recurringPaymentSummaryItem.endDate = nil
+
+        return recurringPaymentSummaryItem
+    }
+
     func generateSummaryItems() {
 
         // ***************************************************************************
@@ -457,8 +503,8 @@ class PaymentProductsViewControllerTarget: NSObject, PKPaymentAuthorizationViewC
         // value being the total and having the name of the merchant as label.
         //
         // A list of subtotal, shipping cost, and total is created below as example.
-        // The values are specified in cents and converted to a NSDecimalNumber with
-        // a exponent of -2.
+        // The values are specified in cents and converted to an NSDecimalNumber with
+        // an exponent of -2.
         //
         // ***************************************************************************
 
@@ -589,16 +635,6 @@ class PaymentProductsViewControllerTarget: NSObject, PKPaymentAuthorizationViewC
         navigationController!.popToRootViewController(animated: true)
     }
 
-    // MARK: -
-
-    // MARK: PKPaymentAuthorizationViewControllerDelegate
-    // Sent to the delegate after the user has acted on the payment request.  The application
-    // should inspect the payment to determine whether the payment request was authorized.
-    //
-    // If the application requested a shipping address then the full addresses is now part of the payment.
-    //
-    // The delegate must call completion with an appropriate authorization status, as may be determined
-    // by submitting the payment credential to a processing gateway for payment authorization.
     // MARK: -
     // MARK: PKPaymentAuthorizationViewControllerDelegate
     // Sent to the delegate after the user has acted on the payment request.  The application

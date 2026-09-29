@@ -22,7 +22,7 @@ class AppConstants {
     static let kClientSessionId = "kClientSessionId"
     static let kCustomerId = "kCustomerId"
     static let kMerchantId = "kMerchantId"
-    static let kApplicationIdentifier = "Swift Example Application/v3.2.0"
+    static let kApplicationIdentifier = "Swift Example Application/v4.0.0"
     static let kBaseURL = "kBaseURL"
     static let kAssetsBaseURL = "kAssetsBaseURL"
     static let kPrice = "kPrice"
